@@ -1,77 +1,42 @@
-import navimg from './assets/logo.png'
-import dollarImg from './assets/dollar-1.png'
+
 import './App.css'
 import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
+import Navbar from './components/Navbar/Navbar'
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
 import { Suspense } from 'react'
+
+
+
+const fetchPlayers = async () => {
+  const res = await fetch("/players.json")
+  return res.json()
+}
 
 
 
 
 function App() {
 
+  const playersPromise = fetchPlayers()
   return (
     <>
-<header>
-    <div className="navbar bg-base-100  w-11/12 mx-auto">
-    <div className="navbar-start">
-      <div className="dropdown">
-        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-        </div>
-        <ul
-          tabIndex={0}
-          className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a>Item 1</a></li>
-          <li>
-            <a>Parent</a>
-            <ul className="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li>
-          <li><a>Item 3</a></li>
-        </ul>
-      </div>
-      <a className="text-xl"><img className='w-[60px]' src={navimg} alt="Site Logo" /></a>
-    </div>
-    <div className="navbar-center hidden lg:flex">
-      <ul className="menu menu-horizontal px-1">
-        <li><a>Item 1</a></li>
-        <li>
-          <details>
-            <summary>Parent</summary>
-            <ul className="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
-    </div>
-    <div className="navbar-end">
-    <p className='flex items-center gap-2 p-2 font-semibold text-lg border-1 border-[#13131310] rounded-xl'>
-      <span>6000000000</span>
-      <span> Coin</span>
-      <img src={dollarImg} alt="Dollar Image" />
-    </p>
-    </div>
-
-    </div>
-</header>
+<Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
+  <Navbar></Navbar>
+</Suspense>
 
 <Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
-<AvailablePlayers>
+<AvailablePlayers playersPromise={playersPromise}>
 
 </AvailablePlayers>
 </Suspense>
 
-<Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
+
+
+{/* <Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
 <SelectedPlayers>
   
 </SelectedPlayers>
-</Suspense>
+</Suspense> */}
 
 
 
