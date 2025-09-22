@@ -1,8 +1,12 @@
 import navimg from './assets/logo.png'
 import dollarImg from './assets/dollar-1.png'
-
-
 import './App.css'
+import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
+import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
+import { Suspense } from 'react'
+
+
+
 
 function App() {
 
@@ -57,7 +61,19 @@ function App() {
     </div>
 </header>
 
+<Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
+<AvailablePlayers>
+
+</AvailablePlayers>
+</Suspense>
+
+<Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
+<SelectedPlayers>
   
+</SelectedPlayers>
+</Suspense>
+
+
 
 
     </>

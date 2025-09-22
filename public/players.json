@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "player-image": "https://ibb.co.com/FkRz26ps",
+    "player-name": "Shakib Al Hasan",
+    "player-country": "Bangladesh",
+    "playing-role": "All-Rounder",
+    "rating": 9.7,
+    "batting-style": "Left-hand Bat",
+    "bowling-style": "Slow Left-arm Orthodox",
+    "price": "120,000 USD"
+  },
+  {
+    "id": 2,
+    "player-image": "https://ibb.co.com/6cF5qjfT",
+    "player-name": "Najmul Hossain Shanto",
+    "player-country": "Bangladesh",
+    "playing-role": "Top-order Batsman",
+    "rating": 8.5,
+    "batting-style": "Right-hand Bat",
+    "bowling-style": "N/A",
+    "price": "90,000 USD"
+  },
+  {
+    "id": 3,
+    "player-image": "https://ibb.co.com/BmRYDfX",
+    "player-name": "Mustafizur Rahman",
+    "player-country": "Bangladesh",
+    "playing-role": "Bowler",
+    "rating": 9.0,
+    "batting-style": "Left-hand Bat",
+    "bowling-style": "Left-arm Fast Medium",
+    "price": "110,000 USD"
+  },
+  {
+    "id": 4,
+    "player-image": "https://ibb.co.com/GQH4XyzN",
+    "player-name": "Tamim Iqbal",
+    "player-country": "Bangladesh",
+    "playing-role": "Batsman",
+    "rating": 8.6,
+    "batting-style": "Left-hand Bat",
+    "bowling-style": "N/A",
+    "price": "100,000 USD"
+  },
+  {
+    "id": 5,
+    "player-image": "https://ibb.co.com/Ldg3Qxm4",
+    "player-name": "Soumya Sarkar",
+    "player-country": "Bangladesh",
+    "playing-role": "All-Rounder",
+    "rating": 8.2,
+    "batting-style": "Left-hand Bat",
+    "bowling-style": "Right-arm Medium",
+    "price": "85,000 USD"
+  },
+  {
+    "id": 6,
+    "player-image": "https://ibb.co.com/fV5gmKW3",
+    "player-name": "Mahmudullah Riyad",
+    "player-country": "Bangladesh",
+    "playing-role": "All-Rounder",
+    "rating": 8.3,
+    "batting-style": "Right-hand Bat",
+    "bowling-style": "Right-arm Off Spin",
+    "price": "95,000 USD"
+  },
+  {
+    "id": 7,
+    "player-image": "https://ibb.co.com/m5wsgTG1",
+    "player-name": "Mehidy Hasan Miraz",
+    "player-country": "Bangladesh",
+    "playing-role": "All-Rounder",
+    "rating": 8.4,
+    "batting-style": "Right-hand Bat",
+    "bowling-style": "Right-arm Off Spin",
+    "price": "90,000 USD"
+  },
+  {
+    "id": 8,
+    "player-image": "https://ibb.co.com/Zq5KPb7",
+    "player-name": "Taskin Ahmed",
+    "player-country": "Bangladesh",
+    "playing-role": "Bowler",
+    "rating": 8.9,
+    "batting-style": "Right-hand Bat",
+    "bowling-style": "Right-arm Fast",
+    "price": "105,000 USD"
+  },
+  {
+    "id": 9,
+    "player-image": "https://ibb.co.com/wNTpqk4G",
+    "player-name": "Rakibul Hasan",
+    "player-country": "Bangladesh",
+    "playing-role": "All-Rounder",
+    "rating": 8.0,
+    "batting-style": "Left-hand Bat",
+    "bowling-style": "Slow Left-arm Orthodox",
+    "price": "70,000 USD"
+  },
+  {
+    "id": 10,
+    "player-image": "https://ibb.co.com/rKknY739",
+    "player-name": "Rejaur Rahman Raja",
+    "player-country": "Bangladesh",
+    "playing-role": "Bowler",
+    "rating": 7.8,
+    "batting-style": "Right-hand Bat",
+    "bowling-style": "Right-arm Fast Medium",
+    "price": "65,000 USD"
+  },
+  {
+    "id": 11,
+    "player-image": "https://ibb.co.com/JPrP2RM",
+    "player-name": "Kamrul Islam Rabbi",
+    "player-country": "Bangladesh",
+    "playing-role": "Bowler",
+    "rating": 7.9,
+    "batting-style": "Right-hand Bat",
+    "bowling-style": "Right-arm Off Spin",
+    "price": "60,000 USD"
+  },
+  {
+    "id": 12,
+    "player-image": "https://ibb.co.com/GfXTSkVf",
+    "player-name": "Curtis Campher",
+    "player-country": "Ireland",
+    "playing-role": "All-Rounder",
+    "rating": 8.1,
+    "batting-style": "Right-hand Bat",
+    "bowling-style": "Right-arm Medium Fast",
+    "price": "80,000 USD"
+  }
+]
