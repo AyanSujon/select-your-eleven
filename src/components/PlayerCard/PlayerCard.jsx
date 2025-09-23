@@ -16,7 +16,7 @@ const handleSelected = (playerData) => {
     setIsSelected(true);
     setAvailableBalance(availableBalance - playerPrice);
 
-    setPurchasedPlayers(...purchasedPlayers, playerData );
+    setPurchasedPlayers([...purchasedPlayers, playerData]);
 
 
 
