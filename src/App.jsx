@@ -28,11 +28,11 @@ function App() {
   <Navbar availableBalance ={availableBalance}></Navbar>
 </Suspense>
 
-<div className=' w-11/12 mx-auto flex justify-between items-center font-bold'>
-    <h1 className=' text-xl'>Available Players</h1>
+<div className=' w-11/12 mx-auto flex justify-between items-center flex-wrap font-bold '>
+    <h1 className=' text-xl'>{toggle === true? "Available Players": `Selected Player (${purchasedPlayers.length}/6)`}</h1>
     <div className='flex gap-0 items-center'>
       <button onClick={()=> setToggle(true)} className={`py-3 px-4 border-1 border-[#13131320] rounded-l-xl border-r-0 ${toggle === true? "bg-[#E7FE29]": ""}`}>Available</button>
-      <button onClick={()=> setToggle(false)} className={`py-3 px-4 border-1 border-[#13131320] rounded-r-xl border-l-0 ${toggle === false? "bg-[#E7FE29]": ""}`}>Selected <span>(0)</span></button>
+      <button onClick={()=> setToggle(false)} className={`py-3 px-4 border-1 border-[#13131320] rounded-r-xl border-l-0 ${toggle === false? "bg-[#E7FE29]": ""}`}>Selected <span>({purchasedPlayers.length})</span></button>
     </div>
 </div>
 
