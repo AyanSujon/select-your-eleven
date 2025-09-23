@@ -4,7 +4,7 @@ import dollarImg from '../../assets/dollar-1.png'
 
 
 
-const Navbar = () => {
+const Navbar = ({availableBalance}) => {
     return (
         <header>
             <div className="navbar bg-base-100  w-11/12 mx-auto">
@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
             <p className='flex items-center gap-2 p-2 font-semibold text-lg border-1 border-[#13131310] rounded-xl'>
-            <span>6000000000</span>
+            <span>{availableBalance}</span>
             <span> Coin</span>
             <img src={dollarImg} alt="Dollar Image" />
             </p>
