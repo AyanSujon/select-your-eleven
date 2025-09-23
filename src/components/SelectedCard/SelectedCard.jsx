@@ -1,8 +1,11 @@
 import React from 'react';
 import removeIcon from "../../assets/remove.png"
 
-const SelectedCard = ({player}) => {
-    console.log(player)
+const SelectedCard = ({player, removePlayer}) => {
+    // console.log(player);
+    const handleRemove = () => {
+        removePlayer(player)
+    };
     return (
             <div className="playerCard flex justify-between items-center p-4 rounded-2xl border-1 border-[#13131320]">
                             <div className='flex items-center gap-4 '>
@@ -15,7 +18,7 @@ const SelectedCard = ({player}) => {
                 </div>
             </div>
             <div>
-                <button><img src={removeIcon} alt="remove icon" /></button>
+                <button onClick={handleRemove} className='bg-gray-100 rounded-lg p-2' ><img src={removeIcon} alt="remove icon" /></button>
             </div>
             </div>
     );

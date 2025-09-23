@@ -4,6 +4,8 @@ import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
 import Navbar from './components/Navbar/Navbar'
 import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
 import { Suspense, useState } from 'react'
+import { ToastContainer } from 'react-toastify';
+
 
 
 
@@ -21,10 +23,18 @@ function App() {
   const [availableBalance, setAvailableBalance] = useState(500000);
   const [purchasedPlayers, setPurchasedPlayers] = useState([]);
   // console.log(purchasedPlayers);
+  const removePlayer = (p) => {
+    // console.log(p);
+    const filteredData = purchasedPlayers.filter(ply => ply.id!==p.id);
+    // console.log(filteredData);
+    setPurchasedPlayers(filteredData);
+    setAvailableBalance(availableBalance + parseInt(p.price.split("USD").join("").split(",").join("")))
+
+  };
 
   return (
     <>
-<Suspense fallback={<div className='flex justify-center items-center h-100'><span class="loading loading-spinner loading-xl"></span></div>}>
+<Suspense fallback={<div  className='flex justify-center items-center h-100'><span class="loading loading-spinner loading-xl"></span></div>}>
   <Navbar availableBalance ={availableBalance}></Navbar>
 </Suspense>
 
@@ -43,21 +53,12 @@ function App() {
   </Suspense>
   :
   <Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
-  <SelectedPlayers purchasedPlayers={purchasedPlayers}></SelectedPlayers>
+  <SelectedPlayers removePlayer={removePlayer} purchasedPlayers={purchasedPlayers}></SelectedPlayers>
   </Suspense>
 
 }
 
-
-
-
-
-
-
-
-
-
-
+<ToastContainer />
 
     </>
   )

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import playerIcon from "../../assets/player-icon.png";
 import countryFlag from "../../assets/countryFlag.png";
+import { toast } from 'react-toastify';
+
+
 
 const PlayerCard = ({player, setAvailableBalance, availableBalance, purchasedPlayers, setPurchasedPlayers}) => {
     
@@ -10,7 +13,7 @@ const handleSelected = (playerData) => {
     const playerPrice = parseInt(playerData.price.split("USD").join("").split(",").join(""));
 
     if(availableBalance< playerPrice){
-        alert("not enough coins!!");
+        toast("Not enough coins!!");
         return;
     };
     setIsSelected(true);
