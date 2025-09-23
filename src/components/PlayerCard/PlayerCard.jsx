@@ -16,6 +16,10 @@ const handleSelected = (playerData) => {
         toast("Not enough coins!!");
         return;
     };
+    if(purchasedPlayers.length === 6){
+        toast("6 players already selected!");
+        return;
+    }
     setIsSelected(true);
     setAvailableBalance(availableBalance - playerPrice);
 
