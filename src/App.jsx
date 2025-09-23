@@ -20,11 +20,11 @@ function App() {
   const playersPromise = fetchPlayers()
   return (
     <>
-<Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
+<Suspense fallback={<div className='flex justify-center items-center h-100'><span class="loading loading-spinner loading-xl"></span></div>}>
   <Navbar></Navbar>
 </Suspense>
 
-<Suspense fallback={<span class="loading loading-spinner loading-xl"></span>}>
+<Suspense fallback={<div className='flex justify-center items-center h-100'><span class="loading loading-spinner loading-xl"></span></div>}>
 <AvailablePlayers playersPromise={playersPromise}>
 
 </AvailablePlayers>
